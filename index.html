@@ -83,7 +83,6 @@
     .acc-info b { margin-right: 6px; color: #000; font-size: 15px; }
     .btn-copy { padding: 6px 14px; border: 1px solid #ddd; background: #fff; font-size: 11px; border-radius: 30px; cursor: pointer; color: #666; }
     
-    /* [NEW] 링크 복사 버튼 디자인 */
     .share-section { padding: 20px 25px 40px; }
     .btn-share { width: 100%; max-width: 380px; margin: 0 auto; padding: 14px 0; background: #333; color: #fff; border: none; border-radius: 30px; font-size: 14px; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; letter-spacing: 0.5px; }
     .btn-share svg { width: 16px; height: 16px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
@@ -190,7 +189,7 @@
       <span class="section-label" style="text-align: center;">Location Info</span>
       
       <div style="margin-bottom: 30px; text-align: center;">
-        <img src="map.png" alt="남산예술원 약도" style="width: 100%; max-width: 400px;">
+        <img src="https://github.com/indisohari/invitation/blob/main/map.png?raw=true" alt="남산예술원 약도" style="width: 100%; max-width: 400px;">
       </div>
 
       <div class="detail-group">
@@ -329,7 +328,6 @@
       setTimeout(function () { el.style.display = "none"; }, 2000);
     }
 
-    // [최적화] 통합된 복사 함수
     function copyToClipboard(txt, successMsg) {
       if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(txt).then(() => toast(successMsg)).catch(() => fallbackCopy(txt, successMsg));
@@ -346,7 +344,6 @@
       document.body.removeChild(t);
     }
     
-    // 링크 복사 전용 함수
     function copyPageLink() {
       copyToClipboard(window.location.href, '청첩장 링크가 복사되었습니다');
     }
